@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #5856eb;
+    --secondary-color: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Form Section */
+#apply {
+    max-width: 800px;
+    margin: 1.5rem auto; /* Reduced from 6rem to 1.5rem */
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+}
+
+#apply h2 {
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+label {
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.tombol-lamaran {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.tombol-lamaran:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    background: #f8f9fa;
+    padding: 1rem 2rem;
+    margin-top: 70px; /* memberikan jarak dari fixed header */
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #0056b3;
+}
+
+.breadcrumb span {
+    color: #6c757d;
+}
+
+.main-content {
+    padding-top: 2rem; /* memberikan jarak dari breadcrumb */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #apply {
+        margin: 1rem 1rem; /* Reduced from 5rem to match desktop spacing */
+        padding: 1.5rem;
+    }
+
+    .tombol-lamaran {
+        width: 100%;
+    }
+}
